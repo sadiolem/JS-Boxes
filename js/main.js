@@ -1,6 +1,6 @@
-var button = document.querySelector('button');
-var boxes = document.querySelectorAll('.box');
-var textarea = document.querySelector('textarea');
+const button = document.querySelector('button');
+const boxes = document.querySelectorAll('.box');
+const textarea = document.querySelector('textarea');
 
 button.addEventListener('click', Action);
 
@@ -22,8 +22,8 @@ function Action() {
  		});
 	});
 
-	var time1 = boxes.length * 650;
-	var time2 = time1 + 600;
+	let time1 = boxes.length * 650;
+	let time2 = time1 + 600;
 
 	setTimeout(function() {
  		textarea.textContent += "--PROGRESS END--";
