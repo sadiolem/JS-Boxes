@@ -2,8 +2,6 @@ const button = document.querySelector('button');
 const boxes = document.querySelectorAll('.box');
 const textarea = document.querySelector('textarea');
 
-button.addEventListener('click', Action);
-
 const Action = () => {
 	button.removeEventListener('click', Action);
 
@@ -36,3 +34,5 @@ const Action = () => {
 		location.reload();
 	}, time2);
 }
+
+button.addEventListener('click', Action);
