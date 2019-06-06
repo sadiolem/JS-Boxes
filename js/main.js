@@ -4,20 +4,22 @@ const textarea = document.querySelector('textarea');
 
 button.addEventListener('click', Action);
 
-function Action() {
+const Action = () => {
 	button.removeEventListener('click', Action);
 
 	button.textContent = "in progress...";
 	textarea.textContent = "--PROGRESS START--" +'\n';
 
-	boxes.forEach(function(box, index) {
-		setTimeout(function() {	
+	boxes.forEach((box, index) => {
+		setTimeout(() => {	
 			box.classList.toggle('box-down');
 		}, index * 500);
-		box.addEventListener("transitionstart", function() {
+		
+		box.addEventListener("transitionstart", () => {
  			textarea.textContent += "Box " + [index+1] + " animation start" +'\n';
  		});
- 		box.addEventListener("transitionend", function() {
+		
+ 		box.addEventListener("transitionend", () => {
  			textarea.textContent += "Box " + [index+1] + " animation end" +'\n';
  		});
 	});
@@ -25,12 +27,12 @@ function Action() {
 	let time1 = boxes.length * 650;
 	let time2 = time1 + 600;
 
-	setTimeout(function() {
+	setTimeout(() => {
  		textarea.textContent += "--PROGRESS END--";
  	}, time1);
 
- 	setTimeout(function() {
+ 	setTimeout(() => {
 		alert('Success!');
 		location.reload();
 	}, time2);
-};
+}
