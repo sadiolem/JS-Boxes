@@ -1,11 +1,11 @@
-const button = document.querySelector('button');
+const startButton = document.querySelector('.start-btn');
 const boxes = document.querySelectorAll('.box');
 const textarea = document.querySelector('textarea');
 
-const Action = () => {
-	button.removeEventListener('click', Action);
+const animateBoxes = () => {
+	startButton.removeEventListener('click', animateBoxes);
 
-	button.textContent = "in progress...";
+	startButton.textContent = "in progress...";
 	textarea.textContent = "--PROGRESS START--" +'\n';
 
 	boxes.forEach((box, index) => {
@@ -14,11 +14,11 @@ const Action = () => {
 		}, index * 500);
 		
 		box.addEventListener("transitionstart", () => {
- 			textarea.textContent += "Box " + [index+1] + " animation start" +'\n';
+ 			textarea.textContent += `Box ${index+1} animation start +'\n'`;
  		});
 		
  		box.addEventListener("transitionend", () => {
- 			textarea.textContent += "Box " + [index+1] + " animation end" +'\n';
+ 			textarea.textContent += `Box ${index+1} animation end +'\n'`;
  		});
 	});
 
@@ -35,4 +35,4 @@ const Action = () => {
 	}, time2);
 }
 
-button.addEventListener('click', Action);
+startButton.addEventListener('click', animateBoxes);
