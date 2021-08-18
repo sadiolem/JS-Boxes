@@ -6,7 +6,7 @@ const animateBoxes = () => {
 	startButton.removeEventListener('click', animateBoxes);
 
 	startButton.textContent = "in progress...";
-	textarea.textContent = "--PROGRESS START--" +'\n';
+	textarea.textContent = `--PROGRESS START-- \n`;
 
 	boxes.forEach((box, index) => {
 		setTimeout(() => {	
