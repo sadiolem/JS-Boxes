@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.removeEventListener('click', init);
   
     startButton.textContent = "in progress...";
-    textarea.textContent = "--PROGRESS START--" + '\n';
+    textarea.textContent = `--PROGRESS START-- \n`;
   
     const boxes = document.querySelectorAll('.box');
   
