@@ -14,11 +14,11 @@ const animateBoxes = () => {
 		}, index * 500);
 		
 		box.addEventListener("transitionstart", () => {
- 			textarea.textContent += `Box ${index+1} animation start +'\n'`;
+ 			textarea.textContent += `Box ${index+1} animation start \n`;
  		});
 		
  		box.addEventListener("transitionend", () => {
- 			textarea.textContent += `Box ${index+1} animation end +'\n'`;
+ 			textarea.textContent += `Box ${index+1} animation end \n`;
  		});
 	});
 
